@@ -1,0 +1,46 @@
+.nav {
+    width: 100%;
+    height: 85px;
+    margin: 30px auto 0 auto;
+    background-color: #9e419c;
+    &__content {
+        max-width: 1440px;
+        height: 100%;
+        @include u-dflex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    &__menu {
+        &>ul {
+            @include u-dflex;
+            list-style: none;
+            padding: 0;
+            & li>a {
+                font-family: "OpenSans-Bold";
+                font-size: $font-md;
+                color: #fff;
+                text-decoration: none;
+                text-transform: uppercase;
+                margin-right: 50px;
+            }
+        }
+    }
+    &__search {
+        position: relative;
+        display: flex;
+        &__input {
+            width: 380px;
+            height: 45px;
+            &:focus {
+                outline: none;
+            }
+        }
+        &__icon {
+            position: absolute;
+            right: 0;
+            width: 45px;
+            height: 51px;
+            background: #e5f0fa url("../assets/zoeken.png") no-repeat center center;
+        }
+    }
+}

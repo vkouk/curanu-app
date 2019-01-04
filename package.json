@@ -1,14 +1,17 @@
 {
   "name": "curanu-app",
   "author": "Vasilis Koukoutis",
-  "description": "Curanu client web application",
+  "description": "Curanu web application",
   "engines": {
     "node": "11,6,0",
     "npm": "6.5.0"
   },
   "license": "MIT",
   "version": "1.0.0",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkouk/curanu-app.git"
+  },
   "dependencies": {
     "firebase": "^5.7.2",
     "lodash": "^4.17.11",

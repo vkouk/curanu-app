@@ -1,0 +1,35 @@
+@mixin u-font-face($fontFamily, $fontUrl) {
+  @font-face {
+    font-family: $fontFamily;
+    src: url($fontUrl);
+  }
+}
+
+@include u-font-face("OpenSans-Regular", "./fonts/assets/OpenSans-Regular.ttf");
+@include u-font-face("OpenSans-Bold", "./fonts/assets/OpenSans-Bold.ttf");
+@include u-font-face(
+  "OpenSans-BoldItalic",
+  "./fonts/assets/OpenSans-BoldItalic.ttf"
+);
+@include u-font-face(
+  "OpenSans-ExtraBold",
+  "./fonts/assets/OpenSans-ExtraBold.ttf"
+);
+@include u-font-face(
+  "OpenSans-ExtraBoldItalic",
+  "./fonts/assets/OpenSans-ExtraBoldItalic.ttf"
+);
+@include u-font-face("OpenSans-Italic", "./fonts/assets/OpenSans-Italic.ttf");
+@include u-font-face("OpenSans-Light", "./fonts/assets/OpenSans-Light.ttf");
+@include u-font-face(
+  "OpenSans-LightItalic",
+  "./fonts/assets/OpenSans-LightItalic.ttf"
+);
+@include u-font-face(
+  "OpenSans-Semibold",
+  "./fonts/assets/OpenSans-Semibold.ttf"
+);
+@include u-font-face(
+  "OpenSans-SemiboldItalic",
+  "./fonts/assets/OpenSans-SemiboldItalic.ttf"
+);
