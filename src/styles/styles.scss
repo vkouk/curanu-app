@@ -5,6 +5,8 @@
 @import "./components/header";
 @import "./components/service";
 @import "./components/nav";
+//Common
+@import './common/accordion';
 body,
 html {
     font-family: "OpenSans-Regular", "sans-serif";
@@ -17,6 +19,15 @@ html {
     @include u-dflex;
     flex-direction: column;
     margin: 0 auto;
+}
+
+.content {
+    min-width: 1440px;
+    display: grid;
+    grid-row-gap: 20px;
+    grid-template-columns: repeat(3, 33.3333%);
+    grid-template-rows: auto;
+    margin-top: 20px;
 }
 
 a:hover {

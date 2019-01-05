@@ -1,8 +1,13 @@
 import React, { Component } from "react";
+import Accordion from "./Common/Accordion";
 
 class Home extends Component {
   render() {
-    return <div>Hi</div>;
+    return (
+      <div className="content">
+        <Accordion />
+      </div>
+    );
   }
 }
 
