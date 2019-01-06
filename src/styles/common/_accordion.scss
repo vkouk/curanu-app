@@ -13,16 +13,42 @@
             &.is-expanded {
                 &>.accordion__body {
                     display: flex;
-                    &--list {
+                    &--blog {
+                        display: block;
+                    }
+                    &--list,
+                    &--news {
                         align-items: center;
                         border-bottom: 1px solid #dae4ee;
                         padding-bottom: 10px;
                     }
+                    &--list:last-of-type,
+                    &--news:last-of-type {
+                        border-bottom: none;
+                    }
+                    &--news {
+                        position: relative;
+                    }
+                    >.accordion__body__like,
+                    .accordion__header__icon--like {
+                        cursor: pointer;
+                        width: 60px;
+                        height: 30px;
+                        background: url("../assets/Bitmap 4.png") no-repeat center center;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
                     >div {
                         margin-left: 20px;
                     }
-                    >div:last-of-type {
+                    >.accordion__body__text:last-of-type {
                         margin-left: 50px;
+                    }
+                    >.accordion__body__details {
+                        >div:first-of-type {
+                            padding-bottom: 15px;
+                        }
                     }
                 }
             }
@@ -33,6 +59,7 @@
         justify-content: space-between;
         background: #ebf0f4;
         cursor: pointer;
+        transition: all 0.5s linear;
         &__text {
             color: #ff952d;
             font-family: "OpenSans-Bold";
@@ -61,6 +88,9 @@
                 background: url("../assets/arrow-right copy 2.png") no-repeat center center;
                 transform: rotate(180deg);
             }
+            &--plus {
+                background: #e5f0fa url("../assets/add.png") no-repeat center center;
+            }
         }
     }
     &__body {
@@ -72,6 +102,29 @@
         font-size: $font-sm;
         color: #657189;
         margin: 20px;
+        &__link {
+            &>a {
+                font-size: $font-sm;
+                color: #657189;
+                text-decoration: none;
+            }
+        }
+        &__header {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &__info {
+            margin-right: auto;
+            margin-left: 20px;
+        }
+        &__content {
+            padding: 20px 0;
+        }
+        &--microblog {
+            flex-direction: column;
+        }
     }
     &__content {
         &.is-expanded {
@@ -84,6 +137,52 @@
             &>.accordion__body {
                 display: block;
             }
+        }
+    }
+    &__footer {
+        height: 50px;
+        background: #ebf0f4;
+        &__body {
+            @include u-dflex;
+            justify-content: space-between;
+        }
+        &__text {
+            font-size: $font-sm;
+            color: #657189;
+            margin-left: 20px;
+        }
+    }
+    &__area {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &__input {
+            >textarea {
+                width: 310px;
+                height: 180px;
+                border: 2px solid #dae4ee;
+                resize: none;
+            }
+        }
+        &__footer {
+            @include u-dflex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        &__links {
+            cursor: pointer;
+            width: 65px;
+            height: 40px;
+            background: url("../assets/Bitmap 2.png") no-repeat center center;
+        }
+        &__btn {
+            background: #44b9f6;
+            color: #fff;
+            padding: 5px 25px;
+            cursor: pointer;
+        }
+        &__text {
+            margin: 20px 0;
         }
     }
 }

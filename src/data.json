@@ -58,6 +58,7 @@
       "id": 1,
       "date": "12/04/2016",
       "content": "Samenleving Het hebben van een partner die positief in het leven staat, is mogelijk goed voor de….",
+      "author": "Jacob Cobijn",
       "image": "Oval 2 2"
     }
   ],
@@ -65,7 +66,10 @@
     {
       "id": 1,
       "date": "12/09/2016 - 11:10",
-      "content": "Nieuwe campagne CuraNed gisteren van start gegaan"
+      "content": "Nieuwe campagne CuraNed gisteren van start gegaan",
+      "author": "Ria de Vries",
+      "avatar": "Oval 2 2",
+      "image": "unnamed"
     }
   ],
   "directnar": [
@@ -83,6 +87,32 @@
       "id": 3,
       "content": "Topdesk",
       "image": "Bitmap 3"
+    }
+  ],
+  "links": [
+    {
+      "id": 1,
+      "link": "Zorggroep.nl"
+    },
+    {
+      "id": 2,
+      "link": "zorgvisie.nl"
+    },
+    {
+      "id": 3,
+      "link": "medicalfacts.nl"
+    }
+  ],
+  "groepen": [
+    {
+      "id": 1,
+      "content": "HRM",
+      "image": "Oval 2"
+    },
+    {
+      "id": 2,
+      "content": "Marketing & Communicatie",
+      "image": "Oval 2 Copy 2"
     }
   ]
 }

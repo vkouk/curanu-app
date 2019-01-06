@@ -9,11 +9,17 @@ class Widget extends Component {
   };
 
   componentDidMount() {
-    return this.state.data.map(rec => {
-      if (rec.image) {
-        this.getImage(rec.image);
-      }
-    });
+    return (
+      this.state.data &&
+      this.state.data.map(rec => {
+        if (rec.avatar && rec.image) {
+          this.getImage(rec.image);
+          this.getImage(rec.avatar);
+        } else {
+          this.getImage(rec.image);
+        }
+      })
+    );
   }
 
   onAccordionToggle = label => {
@@ -63,6 +69,73 @@ class Widget extends Component {
                 <div className="accordion__body__text">{rec.content}</div>
               </>
             )}
+            {rec.link && (
+              <>
+                <div className="accordion__body__link">
+                  <a href={rec.link} target="_blank" rel="noopener noreferrer">
+                    {rec.link}
+                  </a>
+                </div>
+              </>
+            )}
+          </>
+        );
+      case "news":
+        return (
+          <>
+            <div className="accordion__body__img">
+              <img src={this.state[rec.image]} alt={rec.content} />
+            </div>
+            <div className="accordion__body__details">
+              <div className="accordion__body__text">{rec.date}</div>
+              <div className="accordion__body__text">{rec.content}</div>
+            </div>
+            <div className="accordion__body__img accordion__body__like" />
+          </>
+        );
+      case "blog":
+        return (
+          <>
+            <div className="accordion__body__header">
+              <img src={this.state[rec.image]} alt={rec.content} />
+              <div className="accordion__body__info">
+                <div className="accordion__body__text">{rec.author}</div>
+                <div className="accordion__body__text">{rec.date}</div>
+              </div>
+              <div className="accordion__header__icon accordion__header__icon--like" />
+            </div>
+            <div className="accordion__body__content">{rec.content}</div>
+          </>
+        );
+      case "microblog":
+        return (
+          <>
+            <div className="accordion__area">
+              <div className="accordion__area__input">
+                <textarea rows="3" />
+              </div>
+              <div className="accordion__area__footer">
+                <div className="accordion__area__links" />
+                <div className="accordion__area__btn">Plaats</div>
+              </div>
+            </div>
+            <div className="accordion__area__content">
+              <div className="accordion__body__header">
+                <img src={this.state[rec.avatar]} alt={rec.content} />
+                <div className="accordion__body__info">
+                  <div className="accordion__body__text">{rec.author}</div>
+                  <div className="accordion__body__text">{rec.date}</div>
+                </div>
+                <div className="accordion__header__icon accordion__header__icon--like" />
+              </div>
+              <div className="accordion__area__text">{rec.content}</div>
+              <div className="accordion__area__img">
+                <img src={this.state[rec.image]} alt={rec.content} />
+              </div>
+              <div className="accordion__area__text">
+                Lees meer en reacties (0)
+              </div>
+            </div>
           </>
         );
 
@@ -74,7 +147,7 @@ class Widget extends Component {
   render() {
     const {
       state: { data, expandedSections },
-      props: { headerTitle, headerIcon, body, type }
+      props: { headerTitle, headerIcon, body, type, showFooter }
     } = this;
 
     return (
@@ -107,18 +180,36 @@ class Widget extends Component {
           }`}
           label={headerTitle.toLowerCase()}
         >
-          {data.length > 0
-            ? data.map(rec => {
-                return (
-                  <div
-                    key={rec.id}
-                    className={`accordion__body accordion__body--${type}`}
-                  >
-                    {this.renderWidget(type, rec)}
-                  </div>
-                );
-              })
-            : body}
+          {data && data.length > 0 ? (
+            data.map(rec => {
+              return (
+                <div
+                  key={rec.id}
+                  className={`accordion__body accordion__body--${type}`}
+                >
+                  {this.renderWidget(type, rec)}
+                </div>
+              );
+            })
+          ) : (
+            <div className="accordion__body">{body}</div>
+          )}
+        </div>
+        <div
+          className={`accordion__footer ${
+            showFooter && !!expandedSections[headerTitle.toLowerCase()]
+              ? "show"
+              : "hide"
+          }`}
+        >
+          <div className="accordion__footer__body">
+            <div className="accordion__footer__text">
+              {type === "microblog"
+                ? "Toon meer"
+                : `Meer ${headerTitle.toLowerCase()}`}
+            </div>
+            <div className="accordion__footer__icon accordion__header__icon" />
+          </div>
         </div>
       </div>
     );

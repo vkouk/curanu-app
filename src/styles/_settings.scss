@@ -2,6 +2,7 @@
 $font-lg: 18px;
 $font-md: 16px;
 $font-sm: 14px;
+$font-xsm: 12px;
 $grey: #e5f0fa;
 $dark-grey: #657189;
 //Mixins
@@ -9,4 +10,13 @@ $dark-grey: #657189;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+//Selectors
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
 }

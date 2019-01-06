@@ -23,14 +23,23 @@ html {
 }
 
 .content {
-  min-width: 1440px;
-  display: grid;
-  grid-row-gap: 20px;
-  grid-template-columns: repeat(3, 33.3333%);
-  grid-template-rows: auto;
-  margin-top: 20px;
+  width: 100%;
+  &__row {
+    width: 1440px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+  }
+  &__col {
+    margin: 10px 0;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+  }
 }
 
 a:hover {
   cursor: pointer;
 }
+
+//Responsive
+@import "./common/responsive";
