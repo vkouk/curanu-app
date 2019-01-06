@@ -1,48 +1,89 @@
 .accordion {
-  width: 380px;
-  border: 1px solid #dae4ee;
-  &__header {
-    @include u-dflex;
-    justify-content: space-between;
-    background: #ebf0f4;
-    cursor: pointer;
-    &__text {
-      color: #ff952d;
-      font-family: "OpenSans-Bold";
-      font-size: $font-lg;
-      text-transform: uppercase;
-      margin-left: 20px;
-    }
-    &__icon {
-      cursor: pointer;
-      width: 50px;
-      height: 50px;
-      background: #e5f0fa url("../assets/arrow-right.png") no-repeat center
-        center;
-    }
-  }
-  &__body {
-    display: none;
-    max-width: 350px;
-    min-height: 120px;
-    height: 100%;
-    overflow: auto;
-    font-size: $font-sm;
-    color: #657189;
-    margin: 20px;
-  }
-  &__content {
-    &.is-expanded {
-      & > .accordion__header {
-        background: #657189;
-        > div:last-of-type {
-          background: #e5f0fa url("../assets/arrow-right copy 2.png") no-repeat
-            center center;
+    width: 380px;
+    border: 1px solid #dae4ee;
+    &--widget {
+        & .accordion__header {
+            background: #fff;
+            justify-content: stretch;
         }
-      }
-      & > .accordion__body {
-        display: block;
-      }
+        & .accordion__body {
+            min-height: auto;
+        }
+        & .accordion__content {
+            &.is-expanded {
+                &>.accordion__body {
+                    display: flex;
+                    &--list {
+                        align-items: center;
+                        border-bottom: 1px solid #dae4ee;
+                        padding-bottom: 10px;
+                    }
+                    >div {
+                        margin-left: 20px;
+                    }
+                    >div:last-of-type {
+                        margin-left: 50px;
+                    }
+                }
+            }
+        }
     }
-  }
+    &__header {
+        @include u-dflex;
+        justify-content: space-between;
+        background: #ebf0f4;
+        cursor: pointer;
+        &__text {
+            color: #ff952d;
+            font-family: "OpenSans-Bold";
+            font-size: $font-lg;
+            text-transform: uppercase;
+            margin-left: 20px;
+        }
+        &__body {
+            @include u-dflex;
+            justify-content: space-between;
+            width: calc(100% - 80px);
+        }
+        &__icon {
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            background: #e5f0fa url("../assets/arrow-right.png") no-repeat center center;
+            &--close {
+                background: #e5f0fa url("../assets/Shape 2.png") no-repeat center center;
+                margin-left: auto;
+            }
+            &--down {
+                background: url("../assets/arrow-right copy 2.png") no-repeat center center;
+            }
+            &--up {
+                background: url("../assets/arrow-right copy 2.png") no-repeat center center;
+                transform: rotate(180deg);
+            }
+        }
+    }
+    &__body {
+        display: none;
+        max-width: 350px;
+        min-height: 120px;
+        height: 100%;
+        overflow: auto;
+        font-size: $font-sm;
+        color: #657189;
+        margin: 20px;
+    }
+    &__content {
+        &.is-expanded {
+            &>.accordion__header {
+                background: #657189;
+                >div:last-of-type {
+                    background: #e5f0fa url("../assets/arrow-right copy 2.png") no-repeat center center;
+                }
+            }
+            &>.accordion__body {
+                display: block;
+            }
+        }
+    }
 }

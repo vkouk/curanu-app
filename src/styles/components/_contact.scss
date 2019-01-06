@@ -1,0 +1,31 @@
+.contact {
+    width: 380px;
+    height: 175px;
+    background: #00c4e6 url("../assets/telephone.svg") no-repeat right center;
+    &__header {
+        margin: 15px;
+        &__text {
+            font-size: $font-lg;
+            color: #fff;
+        }
+        &__subtext {
+            font-family: "OpenSans-Light";
+            font-size: $font-sm;
+            color: #fff;
+        }
+    }
+    &__input {
+        width: 315px;
+        height: 40px;
+        border: none;
+        padding: 0;
+    }
+    &__icon {
+        height: 40px;
+        background-color: #fff;
+    }
+    &__search {
+        justify-content: center;
+        margin: 35px 30px 0 0;
+    }
+}

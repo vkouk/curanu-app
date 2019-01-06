@@ -1,0 +1,88 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "date": "29/02/2016",
+      "content": "Geef je mening over ons intranet",
+      "image": "Rectangle 5"
+    },
+    {
+      "id": 2,
+      "date": "29/02/2016",
+      "content": "VIO erkend als theoretisch goed ",
+      "image": "Rectangle 5 Copy"
+    },
+    {
+      "id": 3,
+      "date": "29/02/2016",
+      "content": "Commissiebrief over nieuwe Wlz ",
+      "image": "Rectangle 5 Copy 2"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "date": "10/12/2016",
+      "content": "Zorgmarathon"
+    },
+    {
+      "id": 2,
+      "date": "12/12/2016",
+      "content": "Beurs"
+    },
+    {
+      "id": 3,
+      "date": "30/12/2016",
+      "content": "Onze zorgevenement"
+    }
+  ],
+  "statistics": [
+    {
+      "id": 1,
+      "date": "18/04/2016",
+      "content": "Klachtenprocedure"
+    },
+    {
+      "id": 2,
+      "date": "10/02/2016",
+      "content": "Periodieke test gebruikersgroepen"
+    },
+    {
+      "id": 3,
+      "date": "09/05/2015",
+      "content": "Dienstrichtlijn tweede niveau"
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "date": "12/04/2016",
+      "content": "Samenleving Het hebben van een partner die positief in het leven staat, is mogelijk goed voor de….",
+      "image": "Oval 2 2"
+    }
+  ],
+  "microblogs": [
+    {
+      "id": 1,
+      "date": "12/09/2016 - 11:10",
+      "content": "Nieuwe campagne CuraNed gisteren van start gegaan"
+    }
+  ],
+  "directnar": [
+    {
+      "id": 1,
+      "content": "Youforce",
+      "image": "images"
+    },
+    {
+      "id": 2,
+      "content": "MIP-meldingen",
+      "image": "Bitmap"
+    },
+    {
+      "id": 3,
+      "content": "Topdesk",
+      "image": "Bitmap 3"
+    }
+  ]
+}

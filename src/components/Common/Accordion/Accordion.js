@@ -4,7 +4,7 @@ import AccordionContent from "./AccordionContent";
 class Accordion extends Component {
   state = {
     expandedSections: {},
-    isInititalExpanded: false
+    isInititalExpanded: true
   };
 
   onAccordionToggle = index => {
