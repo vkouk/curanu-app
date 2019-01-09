@@ -1,0 +1,74 @@
+.form {
+    width: 1440px;
+    margin: 20px auto;
+    >div,
+    input,
+    textarea {
+        margin: 10px 0;
+    }
+    &__title {
+        font-family: "OpenSans-Bold";
+        font-size: $font-lg;
+        padding-bottom: 20px;
+    }
+    &__control {
+        @include u-dflex;
+        justify-content: flex-start;
+        >input,
+        textarea {
+            margin-left: 20px;
+        }
+    }
+    &__label {
+        font-family: "OpenSans-Bold";
+        font-size: $font-sm;
+    }
+    &__textarea {
+        padding: 10px;
+        resize: none;
+        border-radius: 25px;
+        width: 100%;
+        height: 180px;
+        border: 2px solid #000;
+        resize: none;
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+    &__input {
+        border: 1px solid #000;
+        border-radius: 50px;
+        padding: 5px 25px;
+        &:hover,
+        &:focus,
+        &:active {
+            outline: none;
+        }
+    }
+    &__submit {
+        cursor: pointer;
+        font-family: "OpenSans-Bold";
+        border-radius: 50px;
+        color: #fff;
+        border: 1px solid #000;
+        background: #000;
+        margin-top: 15px;
+        margin-left: auto;
+        padding: 5px 50px;
+    }
+    &__body {
+        width: 990px;
+        >form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &__error {
+        font-family: "OpenSans-Bold";
+        color: #e23232;
+        font-size: $font-sm;
+    }
+}

@@ -1,146 +1,155 @@
 @media only screen and (max-width: 1024px) {
-  .header {
-    width: 100%;
-    min-width: 100%;
-  }
-  .nav {
-    &__content {
-      justify-content: space-evenly;
+    .header {
+        width: 100%;
+        min-width: 100%;
     }
-    &__search {
-      &__input {
-        width: 300px;
-      }
+    .nav {
+        &__content {
+            justify-content: space-evenly;
+        }
+        &__search {
+            &__input {
+                width: 300px;
+            }
+        }
     }
-  }
-  .content {
-    &__row {
-      width: 990px;
+    .content {
+        &__row {
+            width: 990px;
+        }
+        &__col {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
     }
-    &__col {
-      flex: 0 0 50%;
-      max-width: 50%;
+    .form {
+        width: 990px;
     }
-  }
 }
 
 @media only screen and (max-width: 768px) {
-  .nav {
-    height: 125px;
-    &__content {
-      flex-direction: column;
+    .nav {
+        height: 125px;
+        &__content {
+            flex-direction: column;
+        }
     }
-  }
-  .content {
-    &__row {
-      width: 100%;
+    .content {
+        &__row {
+            width: 100%;
+        }
     }
-  }
+    .form {
+        width: 100%;
+        &__body {
+            width: 100%;
+        }
+    }
 }
 
 @media only screen and (max-width: 425px) {
-  .header {
-    &__top {
-      flex-direction: column;
-      justify-content: center;
-      &__menu {
-        > ul li > a {
-          margin-right: 10px;
+    .header {
+        &__top {
+            flex-direction: column;
+            justify-content: center;
+            &__menu {
+                >ul li>a {
+                    margin-right: 10px;
+                }
+            }
         }
-      }
     }
-  }
-  .nav {
-    height: auto;
-    padding-bottom: 10px;
-    &__content {
-      flex-direction: column;
+    .nav {
+        height: auto;
+        padding-bottom: 10px;
+        &__content {
+            flex-direction: column;
+        }
+        &__menu {
+            >ul {
+                flex-direction: column;
+            }
+            >ul li>a {
+                margin-right: 0;
+            }
+        }
     }
-    &__menu {
-      > ul {
-        flex-direction: column;
-      }
-      > ul li > a {
-        margin-right: 0;
-      }
+    .content {
+        &__col {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
     }
-  }
-  .content {
-    &__col {
-      flex: 0 0 100%;
-      max-width: 100%;
+    .accordion,
+    .contact {
+        margin: auto;
     }
-  }
-  .accordion,
-  .contact {
-    margin: auto;
-  }
 }
 
 @media only screen and (max-width: 375px) {
-  .header {
-    &__top {
-      &__menu {
-        > ul li > a {
-          font-size: $font-xsm;
+    .header {
+        &__top {
+            &__menu {
+                >ul li>a {
+                    font-size: $font-xsm;
+                }
+            }
         }
-      }
     }
-  }
-  .accordion {
-    width: 320px;
-    &__header {
-      &__text {
-        font-size: $font-sm;
-      }
-    }
-    &__area {
-      &__input {
-        > textarea {
-          width: 250px;
+    .accordion {
+        width: 320px;
+        &__header {
+            &__text {
+                font-size: $font-sm;
+            }
         }
-      }
+        &__area {
+            &__input {
+                >textarea {
+                    width: 250px;
+                }
+            }
+        }
     }
-  }
-  .contact {
-    width: 320px;
-    &__search {
-      margin: 35px 5px 0 0;
+    .contact {
+        width: 320px;
+        &__search {
+            margin: 35px 5px 0 0;
+        }
     }
-  }
 }
 
 @media only screen and (max-width: 320px) {
-  .header {
-    &__top {
-      &__menu {
-        > ul li > a {
-          font-size: 10px;
-        }
-      }
-    }
-  }
-  .nav {
-    &__menu {
-      > ul li {
-        padding-bottom: 5px;
-      }
-    }
-  }
-  .accordion {
-    &--widget {
-      & > .accordion__content {
-        &.is-expanded {
-          > .accordion__body {
-            > div {
-              margin: 0 5px;
+    .header {
+        &__top {
+            &__menu {
+                >ul li>a {
+                    font-size: 10px;
+                }
             }
-          }
         }
-      }
     }
-  }
-  .wrapper {
-    overflow: hidden;
-  }
+    .nav {
+        &__menu {
+            >ul li {
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .accordion {
+        &--widget {
+            &>.accordion__content {
+                &.is-expanded {
+                    >.accordion__body {
+                        >div {
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .wrapper {
+        overflow: hidden;
+    }
 }

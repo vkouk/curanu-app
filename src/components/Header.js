@@ -12,7 +12,7 @@ class Header extends Component {
             <div className="header__top__menu">
               <ul>
                 <li>
-                  <Link to="#">Groepen Contact</Link>
+                  <Link to="/contact">Groepen Contact</Link>
                 </li>
                 <li>
                   <Link to="#">FAQ</Link>
@@ -34,13 +34,15 @@ class Header extends Component {
             </div>
           </div>
           <div className="header__sub">
-            <div className="header__logo">
-              <div className="header__logo__image" />
-              <div className="header__logo__content">
-                <div className="header__logo__title">CuraNu</div>
-                <div className="header__logo__subtitle">Zorg en welzijn</div>
+            <Link to="/">
+              <div className="header__logo">
+                <div className="header__logo__image" />
+                <div className="header__logo__content">
+                  <div className="header__logo__title">CuraNu</div>
+                  <div className="header__logo__subtitle">Zorg en welzijn</div>
+                </div>
               </div>
-            </div>
+            </Link>
             <div className="header__logo__text">Intranet</div>
           </div>
         </div>

@@ -6,6 +6,7 @@
 @import "./components/service";
 @import "./components/nav";
 @import "./components/contact";
+@import "./components/form";
 //Common
 @import "./common/accordion";
 body,
@@ -39,6 +40,11 @@ html {
 
 a:hover {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
 }
 
 //Responsive
